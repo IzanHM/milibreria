@@ -1,0 +1,53 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import * as IzanHMStories from "./IzanHM.stories"; // Importamos las historias de IzanHM
+
+<Meta of={IzanHMStories} title="IzanHM" />
+
+# IzanHM
+
+El componente `IzanHM` es un avatar basado en MUI que incluye la imagen de perfil del usuario y su nombre. Es sencillo y reutilizable, permitiendo mostrar tanto el avatar como el nombre del usuario.
+
+## Default Avatar
+
+Este es un ejemplo del avatar predeterminado (`DefaultAvatar`), donde no se proporciona una imagen, y se usa un avatar por defecto con el nombre del usuario.
+
+### Example
+
+<Canvas of={IzanHMStories.DefaultAvatar} />
+
+## Usage
+
+```tsx
+import { IzanHM } from 'milibreria';
+
+function Example() {
+  return (
+    <IzanHM
+      nombre="Izan Hernández"
+      imagen="" // No se pasa imagen, se usa el avatar por defecto
+      altImagen="Avatar de Izan Hernández"
+    />
+  );
+}
+
+export default Example;
+```
+
+#### Example
+
+<Canvas of={IzanHMStories.CustomAvatar} />
+
+## Usage
+
+```ts
+import { IzanHM } from 'milibreria';
+
+function Example() {
+  return (
+    <IzanHM
+      nombre="Ana García"
+      imagen="/path-to-image.jpg" // Imagen personalizada para el avatar
+      altImagen="Avatar de Ana García"
+    />
+  );
+}

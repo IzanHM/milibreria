@@ -1,0 +1,53 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import * as MyFavoriteBorderStories from "./myfavoriteborder.stories"; // Importamos las historias de MyFavoriteBorder
+
+<Meta of={MyFavoriteBorderStories} title="MyFavoriteBorder" />
+
+# MyFavoriteBorder
+
+El componente `MyFavoriteBorder` es un botón icónico basado en MUI que incluye un icono de favorito bordeado. Es altamente personalizable, permitiendo ajustar el color del icono, habilitar o deshabilitar el botón, y asignar una función `onClick`.
+
+## Primary Favorite Border Button
+
+Este es un ejemplo del botón de favorito bordeado principal (`Primary`), que utiliza el color primario y está habilitado para hacer clic.
+
+### Example
+
+<Canvas of={MyFavoriteBorderStories.Secondary} />
+
+## Usage
+
+```tsx
+import { MyFavoriteBorder } from 'milibreria';
+
+function Example() {
+  return (
+    <MyFavoriteBorder
+      color="primary"
+      disabled={false}
+      onClick={() => alert("Favorite Border Primary")}
+    />
+  );
+}
+
+export default Example;
+```
+
+#### Example
+
+<Canvas of={MyFavouriteStories.Secondary} />
+
+## Usage
+
+```ts
+import { MyFavoriteBorder } from 'milibreria';
+
+function Example() {
+  return (
+    <MyFavoriteBorder
+      color="secondary"
+      disabled={false}
+      onClick={() => alert("Favorite Border Secondary")}
+    />
+  );
+}

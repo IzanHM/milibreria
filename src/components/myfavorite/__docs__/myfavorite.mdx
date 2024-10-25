@@ -1,0 +1,53 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import * as MyFavoriteStories from "./myfavorite.stories"; // Importamos las historias de MyFavorite
+
+<Meta of={MyFavoriteStories} title="MyFavorite" />
+
+# MyFavorite
+
+El componente `MyFavorite` es un botón icónico basado en MUI que incluye un icono de favorito. Es altamente personalizable, permitiendo ajustar el color del icono, habilitar o deshabilitar el botón, y asignar una función `onClick`.
+
+## Primary Favorite Button
+
+Este es un ejemplo del botón de favorito principal (`Primary`), que utiliza el color primario y está habilitado para hacer clic.
+
+### Example
+
+<Canvas of={MyFavoriteStories.Primary} />
+
+## Usage
+
+```tsx
+import { MyFavorite } from 'milibreria';
+
+function Example() {
+  return (
+    <MyFavorite
+      color="primary"
+      disabled={false}
+      onClick={() => alert("Favorite Primary")}
+    />
+  );
+}
+
+export default Example;
+```
+
+#### Example
+
+<Canvas of={MyFavouriteStories.Secondary} />
+
+## Usage
+
+```ts
+import { MyFavorite } from 'milibreria';
+
+function Example() {
+  return (
+    <MyFavorite
+      color="secondary"
+      disabled={false}
+      onClick={() => alert("Favorite Secondary")}
+    />
+  );
+}

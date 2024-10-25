@@ -1,0 +1,67 @@
+import { Canvas, Meta } from "@storybook/blocks";
+import * as MyButtonStories from "./mybutton.stories"; // Importamos las historias de MyButton
+
+<Meta of={MyButtonStories} title="MyButton" />
+
+# MyButton
+
+El componente `MyButton` es un botón altamente personalizable con diferentes estilos, colores y comportamientos según las props que se le pasen.
+
+## Primary Button
+
+Este es un ejemplo del botón principal (`Primary`), que utiliza texto negro, fondo verde, y tiene comportamiento `hover` con texto amarillo y fondo azul.
+
+### Example
+
+<Canvas of={MyButtonStories.Primary} />
+
+## Usage
+
+```tsx
+import { MyButton } from 'milibreria';
+
+function Example() {
+  return (
+    <MyButton
+      text="Button primary"
+      txtcolor="black"
+      bgcolor="green"
+      bordercolor="black"
+      borderwidth="2px"
+      hoverTxtColor="yellow"
+      hoverBgColor="blue"
+      disabled={false}
+      size="small"
+      onClick={() => alert("Button Primary")}
+    />
+  );
+}
+
+export default Example;
+```
+
+#### Example
+
+<Canvas of={MyButtonStories.Secondary} />
+
+## Usage
+
+```ts
+import { MyButton } from 'milibreria';
+
+function Example() {
+  return (
+    <MyButton
+      text="Button secondary"
+      txtcolor="white"
+      bgcolor="pink"
+      bordercolor="black"
+      borderwidth="2px"
+      hoverTxtColor="blue"
+      hoverBgColor="yellow"
+      disabled={false}
+      size="small"
+      onClick={() => alert("Button secondary")}
+    />
+  );
+}
